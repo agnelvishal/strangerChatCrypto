@@ -63,7 +63,8 @@ HiChat.prototype = {
         this.socket.on('newImg', function(user, img, color) {
             that._displayImage(user, img, color);
         });
-        document.getElementById('loginBtn').addEventListener('click', function() {
+        document.getElementById('loginBtn').addEventListener('click',  function() {
+            
             var nickName = document.getElementById('nicknameInput').value;
             if (nickName.trim().length != 0) {
                 that.socket.emit('login', nickName);
